@@ -1,14 +1,14 @@
-// let char = new Sorcerer("Nilton")
-// console.log(char.name);
-// console.log(char.life);
-// console.log(char.attack);
+let log = new Log(document.querySelector(".log"));
 
-let monster = new LittleMonster();
-console.log(monster.name);
-console.log(monster.life);
-console.log(monster.attack);
+let char = new Knight("Alma Negra");
+let monster = new BigMonster();
 
-let monster2 = new BigMonster();
-console.log(monster2.name);
-console.log(monster2.life);
-console.log(monster2.attack);
+const stage = new Stage(
+  char,
+  monster,
+  document.querySelector("#char"),
+  document.querySelector("#monster"),
+  log
+);
+
+stage.start();
